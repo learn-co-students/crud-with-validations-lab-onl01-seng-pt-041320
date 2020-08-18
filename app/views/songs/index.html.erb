@@ -1,0 +1,8 @@
+<h1>This will show all songs:</h1>
+<table border=1 cellspacing=0 cellpadding=2>
+<tbody>
+<% @songs.each do |song|%>
+    <tr><td><%= song.title %></td></tr> 
+<%end%>
+</tbody>
+</table>
