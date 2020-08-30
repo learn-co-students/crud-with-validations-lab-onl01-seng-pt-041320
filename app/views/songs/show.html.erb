@@ -1,0 +1,7 @@
+<%= @song.title %>
+
+<%= @song.artist_name %>
+
+<%= button_to "Delete Song", @song, :method => :delete  %>
+
+<%= button_to "Back to All Songs", songs_path, :method => :get  %>
