@@ -8,9 +8,12 @@ class SongsController < ApplicationController
     set_song
   end
 
+  def new 
+    @song = Song.new
+  end
+
   def edit
-   
-    set_song
+   set_song
   end
 
   def create 

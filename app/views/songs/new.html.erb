@@ -1,17 +1,18 @@
 <h1>Make a New Song</h1>
 
 
-<%= form_for @song do |f| % >
+<%= form_for @song do |f| %>
   <% if @song.errors.any? %>
     <div id="error_explanation">
       <h2>We found <%= @song.errors.size %> errors: </h2>
       <ul>
         <% @song.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
-            <% end %>
+          
           </ul>
       </div>
-      <% end %>
+    <% end %>
+<% end %>
 
       <div class="field">
           <%= f.label :title %><br>
@@ -41,4 +42,4 @@
       <div class="actions">
           <%= f.submit %>
       </div>
-      <% end %>
+<% end %>
