@@ -1,0 +1,9 @@
+<h1>Heres some songs</h1>
+<%= @songs.each do |song| %>
+  <p><%= song.title %></p>
+  <p><%= song.released %></p>
+  <p><%= song.release_year %></p>
+  <p><%= song.artist_name %></p>    
+  <p><%= song.genre %></p> 
+  <%= link_to "Edit", edit_song_path(song) %>
+  <% end %>
