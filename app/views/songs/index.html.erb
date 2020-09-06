@@ -1,7 +1,8 @@
 <h1> Songs </h1>
-
-<ul>
+<table>
+<tbody>
     <% @songs.each do |s| %>
-        <% link_to s.title, song_path(s) %>
+        <tr><td><% link_to s.title, song_path(s) %></td></tr>
     <% end %>
-</ul>
+</tbody>
+</table>
