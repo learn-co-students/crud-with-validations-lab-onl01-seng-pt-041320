@@ -1,0 +1,9 @@
+<h1>This is the Songs Index Table</h1>
+<p>Funny little easter egg of an error containing ('tbody > tr ')</p>
+<table boarder=2 cellspacing=1 callpadding=1>
+    <tbody>
+    <% @songs.each do |song| %>
+        <tr><td><% song.title %></td></tr>
+    <% end %>
+    </tbody>
+</table>
