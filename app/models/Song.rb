@@ -4,10 +4,10 @@ class Song < ActiveRecord::Base
     message: "Cannot repeat title in same year."}
     validates :released, inclusion: { in: [true, false] }
     validates :release_year, presence: true, if: :released
-    validates :valid_release_year
+    validates :release_year, presence: true, numericality: {less_than_or_equal_to: Time.now.year}, if: :released
 
     private
-    def valid_release_year
+    def future_release_year
         if self.release_year > Date.today.year
             self.errors.add(:release_year, "Must be older or current year")
         end
